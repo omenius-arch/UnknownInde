@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8">
+    <title>Gian Hàng Ẩm Thực Tết 2026</title>
+    <style>
+        /* PHẦN CSS (ĐỊNH DẠNG GIAO DIỆN) */
+        * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; background-color: #fffaf0; color: #333; }
+
+        /* 1. TRANG CHÀO MỪNG & HIỆU ỨNG PHÁO HOA */
+        .banner {
+            /* CHÈN ẢNH NỀN BANNER TẠI ĐÂY: Bạn đặt tên ảnh là nen_tet.jpg */
+            background: linear-gradient(rgba(183, 28, 28, 0.7), rgba(0, 0, 0, 0.7)), url("nen_tet.jpg") no-repeat center center;
+            background-size: cover;
+            height: 450px;
+            display: flex; flex-direction: column; justify-content: center; align-items: center;
+            color: #ffd700; text-align: center; position: relative; overflow: hidden;
+        }
+        .banner h1 { font-size: 3.5rem; text-shadow: 0 0 20px #ff0000; z-index: 2; margin-bottom: 10px; }
+        
+        /* Hiệu ứng pháo hoa */
+        .firework {
+            position: absolute; width: 6px; height: 6px; background: #fff;
+            border-radius: 50%; box-shadow: 0 0 20px 10px #ffd700, 30px 30px 20px 5px #ff4500;
+            animation: explode 2s infinite ease-out; opacity: 0;
+        }
+        .firework:nth-child(1) { top: 20%; left: 15%; animation-delay: 0s; }
+        .firework:nth-child(2) { top: 10%; left: 80%; animation-delay: 0.5s; }
+        .firework:nth-child(3) { top: 40%; left: 50%; animation-delay: 1s; }
+        @keyframes explode {
+            0% { transform: scale(0); opacity: 1; }
+            100% { transform: scale(25); opacity: 0; }
+        }
+
+        /* 2. MENU LIÊN KẾT NỘI TRANG */
+        nav { background-color: #d32f2f; padding: 15px; position: sticky; top: 0; z-index: 1000; border-bottom: 3px solid #ffd700; }
+        nav ul { text-align: center; list-style: none; }
+        nav ul li { display: inline; margin: 0 20px; }
+        nav ul li a { color: white; text-decoration: none; font-weight: bold; text-transform: uppercase; font-size: 0.9rem; }
+        nav ul li a:hover { color: #ffd700; }
+
+        /* 3. GIỚI THIỆU (SLOGAN) */
+        .row { display: flex; flex-wrap: wrap; max-width: 1100px; margin: auto; padding: 40px 0; }
+        .block_3 { flex: 1; padding: 20px; text-align: center; }
+        .block_3 h3 { color: #d32f2f; margin-bottom: 10px; border-bottom: 2px solid #ffd700; display: inline-block; }
+
+        /* 4. GIAN HÀNG ẨM THỰC (TABLE) */
+        .content { padding: 50px 0; text-align: center; background-color: #fff; }
+        .content h2 { color: #d32f2f; margin-bottom: 30px; font-size: 2rem; }
+        table { width: 85%; margin: auto; }
+        td { padding: 20px; width: 50%; vertical-align: middle; }
+        
+        /* Hiệu ứng ảnh sáng tạo */
+        .img-zoom { 
+            border-radius: 15px; border: 4px solid #ffd700; transition: 0.4s; 
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        .img-zoom:hover { transform: scale(1.08) rotate(2deg); }
+
+        /* 5. LIÊN HỆ - ĐẶT HÀNG (FOOTER) */
+        footer { background-color: #212121; color: white; padding: 40px 0; text-align: center; }
+        footer a { color: #ffd700; text-decoration: none; }
+        .order-form input { padding: 8px; border-radius: 5px; border: none; margin-bottom: 5px; }
+        .order-form button { background: #d32f2f; color: white; border: none; padding: 8px 15px; border-radius: 5px; cursor: pointer; }
+    </style>
+</head>
+<body>
+
+    <div class="banner" id="trang-chu">
+        <div class="firework"></div>
+        <div class="firework"></div>
+        <div class="firework"></div>
+        <h1>XUÂN BÍNH NGỌ 2026</h1>
+        <p>Gian Hàng Ẩm Thực Bánh & Mứt Truyền Thống</p>
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="#trang-chu">Trang Chủ</a></li>
+            <li><a href="#gioi-thieu">Giới Thiệu</a></li>
+            <li><a href="#gian-hang">Gian Hàng</a></li>
+            <li><a href="#hinh-anh">Hình Ảnh</a></li>
+            <li><a href="#lien-he">Đặt Hàng</a></li>
+        </ul>
+    </nav>
+
+    <div class="row" id="gioi-thieu">
+        <div class="block_3">
+            <h3>BÁNH BÔNG LAN</h3>
+            <p>Hương vị bơ sữa, mềm mịn, mang lại may mắn đầu năm.</p>
+        </div>
+        <div class="block_3">
+            <h3>MỨT TẾT</h3>
+            <p>Ngọt ngào hương vị quê hương, thắm đượm tình thân.</p>
+        </div>
+        <div class="block_3">
+            <h3>NƯỚC NGỌT</h3>
+            <p>Giải nhiệt ngày xuân, sảng khoái cùng bạn bè.</p>
+        </div>
+    </div>
+
+    <div class="content" id="gian-hang">
+        <h2>DANH MỤC MÓN NGON</h2>
+        <table>
+            <tr>
+                <td>
+                    <h3>Bánh Bông Lan Kim Sa</h3>
+                    <p>Bánh mềm tan trong miệng với lớp nhân trứng muối tan chảy.</p>
+                </td>
+                <td>
+                    <img src="data:image/jpeg;base64,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" width="100%" class="img-zoom" alt="Bánh bông lan">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-wLPkAxHL59qxZOGCxd8fUH1rRHLPnwUfnw&s" width="100%" class="img-zoom" alt="Mứt Tết">
+                </td>
+                <td>
+                    <h3>Mứt Dừa & Mứt Sen</h3>
+                    <p>Được làm thủ công, không chất bảo quản, vị ngọt thanh khiết.</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h3>Nước Giải Khát Các Loại</h3>
+                    <p>Đầy đủ các loại nước ngọt, nước trái cây phục vụ khách du xuân.</p>
+                </td>
+                <td>
+                    <img src="nuoc_ngot.jpg" width="100%" class="img-zoom" alt="Nước ngọt">
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="content" id="hinh-anh" style="background-color: #fff3e0;">
+        <h2>KHÔNG KHÍ TẾT 2026</h2>
+        <p style="margin-bottom: 20px;">Cùng xem video giới thiệu gian hàng của chúng mình!</p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Video Tết" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+    <footer id="lien-he">
+        <div class="row">
+            <div class="block_3">
+                <h3>LIÊN HỆ</h3>
+                <p>📍12a1 thpt ngoc to</p>
+                <p>📞 tiktok a1nhungcondechamchi</p>
+            </div>
+            <div class="block_3 order-form">
+                <h3>ĐẶT HÀNG NHANH</h3>
+                <form>
+                    <input type="text" placeholder="Tên của bạn..."><br>
+                    <input type="tel" placeholder="Số điện thoại..."><br>
+                    <button type="button">GỬI YÊU CẦU</button>
+                </form>
+            </div>
+            <div class="block_3">
+                <h3>LIÊN KẾT NHANH</h3>
+                <p><a href="#trang-chu">Về đầu trang</a></p>
+                <p><a href="#gian-hang">Xem thực đơn</a></p>
+            </div>
+        </div>
+        <p style="margin-top: 20px; font-size: 0.8rem; color: #888;">&copy; 2026 - Nhóm Học Sinh Thực Hiện</p>
+    </footer>
+
+</body>
+</html>
+
